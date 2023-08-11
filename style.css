@@ -1,0 +1,138 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(0, 0%, 94%);
+    --Light-grey: hsl(0, 0%, 86%);
+    --Smokey-grey: hsl(0, 1%, 44%);
+    --Off-black: hsl(0, 0%, 8%);
+    --Purple: hsl(259, 100%, 65%);
+    --Light-red: hsl(0, 100%, 67%)
+}
+
+@font-face {
+    font-family: Pop;
+    src: url(assets/fonts/Poppins-ExtraBold.ttf)
+}
+
+* {
+    font-family: Pop;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Off-white);
+}
+
+.container {
+    background-color: var(--White);
+    width: 420px;
+    max-width: 80%;
+    padding: 30px;
+    position: relative;
+    border-radius: 20px;
+    border-bottom-right-radius: 150px;
+}
+
+input {
+    width: 70px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid var(--Off-white);
+    outline: none;
+}
+
+input:focus {
+    border: 2px solid var(--Purple);
+}
+
+small {
+    color:red;
+    font-size: 0.6rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.submit-btn {
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    display: flex;
+    background-color: var(--Purple);
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    top: 75px;
+}
+
+.submit-btn img {
+    transform: scale(0.7);
+}
+
+.submit-btn:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+h1 {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+.output span {
+    color: var(--Purple);
+    font-style: italic;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.input-flex {
+    display: flex;
+    border-bottom: 2px solid var(--Off-white);
+    margin-bottom: 20px;
+}
+
+.input-container span {
+    color: var(--Smokey-grey);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.5rem;
+}
+
+::placeholder {
+    color: var(--Smokey-grey);
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    input {
+        width: 80%;
+    }
+
+    .submit-btn {
+        width: 60px;
+        height: 60px;
+        right: 45%;
+        top: 120px;
+    }
+
+    .submit-btn img {
+        transform: scale(0.4);
+    }
+
+    .input-flex {
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    }
+}
